@@ -1,0 +1,53 @@
+Database Name:   HMS
+Table Name       :   Out_p
+
+------------------------------------------------------------
+C# Connection code to SQL Server:
+ --------------------------------------------------------
+using System.Data.SqlClient;  
+using System.Threading.Tasks;
+
+ SqlConnection con = new SqlConnection(@"Data Source=QABILE-PC\SQLEXPRESS;Initial Catalog=AB;Integrated Security=True"); 
+
+
+
+Save Register code:
+
+
+ string Data_Lagudbinayo = null;
+            Data_Lagudbinayo = @"Data Source=xxxxxxxx;Initial Catalog=xxxxx;User ID=xxxxxxx;Integrated Security=true";
+            SqlConnection xidiidka_sql = new SqlConnection(Data_Lagudbinayo);
+            SqlCommand Amar_SQL = new SqlCommand();
+            Amar_SQL.Connection = xidiidka_sql;
+
+
+            Amar_SQL.CommandText = ("INSERT  into xxxxx VALUES (@SurName,@Family_Name,@Gender,@Marital_Status,@National_ID,@Private_Phone,@DOB,@Reg_Date,@Employer_Phone,@Employer,@Nationality,@Employer_Address,@Age,@Shift,@City,@Home_Address,@Doctor,@Ticket_Price)");
+
+
+            Amar_SQL.Parameters.AddWithValue("@SurName", textBox1.Text);
+            Amar_SQL.Parameters.AddWithValue("@Family_Name", textBox2.Text);
+            Amar_SQL.Parameters.AddWithValue("@Gender", comboBox1.SelectedItem);
+            Amar_SQL.Parameters.AddWithValue("@Marital_Status", comboBox2.SelectedItem);
+            Amar_SQL.Parameters.AddWithValue("@National_ID", textBox3.Text);
+            Amar_SQL.Parameters.AddWithValue("@Private_Phone", textBox4.Text);
+            Amar_SQL.Parameters.AddWithValue("@DOB", dateTimePicker1.Value);
+            Amar_SQL.Parameters.AddWithValue("@Reg_Date", dateTimePicker2.Value);
+            Amar_SQL.Parameters.AddWithValue("@Employer_Phone", textBox7.Text);
+            Amar_SQL.Parameters.AddWithValue("@Employer", textBox5.Text);
+            Amar_SQL.Parameters.AddWithValue("@Nationality", textBox8.Text);
+            Amar_SQL.Parameters.AddWithValue("@Employer_Address", textBox6.Text);
+            Amar_SQL.Parameters.AddWithValue("@Age", textBox9.Text);
+            Amar_SQL.Parameters.AddWithValue("@Shift", comboBox3.SelectedItem);
+            Amar_SQL.Parameters.AddWithValue("@City", textBox11.Text);
+            Amar_SQL.Parameters.AddWithValue("@Home_Address", textBox12.Text);
+            Amar_SQL.Parameters.AddWithValue("@Doctor", comboBox4.SelectedItem);
+            Amar_SQL.Parameters.AddWithValue("@Ticket_Price", textBox10.Text);
+
+            
+        
+                xidiidka_sql.Open();
+                Amar_SQL.ExecuteNonQuery();
+                MessageBox.Show("The Paient Data has been Registered.");
+                xidiidka_sql.Close();
+
+

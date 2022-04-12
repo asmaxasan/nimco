@@ -1,0 +1,3 @@
+﻿C:\Users\Windows 10 Pro\Downloads\ebessines\imge\WindowsFormsApplication2\WindowsFormsApplication2.csproj : error  : Unable to read the project file 'WindowsFormsApplication2.csproj'. 
+C:\Users\Windows 10 Pro\Downloads\ebessines\imge\WindowsFormsApplication2\WindowsFormsApplication2.csproj: The project file could not be loaded. Could not find a part of the path 'C:\Users\Windows 10 Pro\Downloads\ebessines\imge\WindowsFormsApplication2\WindowsFormsApplication2.csproj'.
+
